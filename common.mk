@@ -22,8 +22,6 @@
 # definition file).
 #
 
-$(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -177,6 +175,11 @@ PRODUCT_PACKAGES += \
     cneapiclient \
     com.quicinc.cne \
     services-ext
+
+# Custom packages
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/vendor/lib/libmmcamera2_mct.so:system/vendor/lib/libmmcamera2_mct.so \
+    $(LOCAL_PATH)/prebuilts/vendor/lib/libmmcamera_imx371.so:system/vendor/lib/libmmcamera_imx371.so
 
 # Display
 PRODUCT_PACKAGES += \
@@ -470,6 +473,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
+
+# Inherit vendor
+$(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
