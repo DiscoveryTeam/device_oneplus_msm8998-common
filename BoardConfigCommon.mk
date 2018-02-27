@@ -34,9 +34,6 @@ BOARD_VENDOR := oneplus
 # we are too big to fit in
 PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
 
-# Use Snapdragon LLVM, if available
-TARGET_USE_SDCLANG := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8998
 TARGET_NO_BOOTLOADER := true
@@ -64,6 +61,7 @@ TARGET_USES_64_BIT_BINDER := true
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048
 BOARD_KERNEL_CMDLINE += androidboot.configfs=true
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -73,7 +71,7 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
-TARGET_KERNEL_CONFIG := lineage_oneplus5_defconfig
+TARGET_KERNEL_CONFIG := cardinal_oneplus5_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
@@ -165,7 +163,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-WITH_LINEAGE_CHARGER := false
+WITH_CUSTOM_CHARGER := false
 
 # CNE and DPM
 BOARD_USES_QCNE := true
@@ -196,16 +194,6 @@ OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
-
-# Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-    endif
-  endif
-endif
 
 # GPS
 TARGET_NO_RPC := true
