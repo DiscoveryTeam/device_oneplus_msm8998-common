@@ -114,7 +114,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.force_sw_gles=0 \
     persist.sys.wfd.virtual=0 \
-    persist.hwc.enable_vds=1
+    persist.hwc.enable_vds=1 \
+    vendor.display.enable_default_color_mode=0
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -140,7 +141,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.fw.bg_apps_limit=60 \
+    ro.vendor.qti.sys.fw.bg_apps_limit=60 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.am.reschedule_service=true \
     sched.colocate.enable=1 \
