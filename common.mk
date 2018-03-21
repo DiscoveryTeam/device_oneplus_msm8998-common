@@ -220,8 +220,8 @@ PRODUCT_PACKAGES += \
 
 # Device
 PRODUCT_PACKAGES += \
-    DeviceParts \
     Doze
+#    DeviceParts \
 
 # DRM
 PRODUCT_PACKAGES += \
