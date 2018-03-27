@@ -175,11 +175,6 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
-# Custom packages
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/vendor/lib/libmmcamera2_mct.so:system/vendor/lib/libmmcamera2_mct.so \
-    $(LOCAL_PATH)/prebuilts/vendor/lib/libmmcamera_imx371.so:system/vendor/lib/libmmcamera_imx371.so
-
 # Google Lens
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/lens/google_build.xml:system/etc/sysconfig/google_build.xml \
