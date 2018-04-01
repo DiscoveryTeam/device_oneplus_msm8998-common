@@ -86,6 +86,16 @@
     <string name="fp_swipe_down_switch_summary_head">Default fingerprint notification swipe down gesture</string>
     <string name="fp_swipe_down_switch_title_head">Fingerprint swipe down gesture</string>
 
+    <string name="doze_category_title">Ambient display</string>
+    <string name="doze_category_summary">Wake screen when you receive notifications</string>
+    <string name="wave_check_summary">Pulse notifications on hand wave</string>
+    <string name="wave_check_title">Hand wave</string>
+    <string name="tilt_check_summary">Pulse notifications when device is picked up</string>
+    <string name="tilt_check_title">Pick up</string>
+    <string name="pocket_check_summary">Pulse notifications on removal from pocket</string>
+    <string name="pocket_check_title">Pocket</string>
+    <string name="ambient_display_enable">Ambient display must be enabled in display settings</string>
+
     <string name="panel_category_title">Panel modes</string>
     <string name="panel_category_summary">Modes for panel color correction</string>
     <string name="off_mode_title">Off</string>

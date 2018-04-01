@@ -214,10 +214,9 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
 
-# Device
+# DeviceParts
 PRODUCT_PACKAGES += \
-    DeviceParts \
-    Doze
+    DeviceParts
 
 # DRM
 PRODUCT_PACKAGES += \
