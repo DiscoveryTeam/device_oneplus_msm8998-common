@@ -411,6 +411,7 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+    <bool name="config_proximityCheckOnFingerprintWake">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
