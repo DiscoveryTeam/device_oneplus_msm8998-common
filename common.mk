@@ -471,3 +471,6 @@ $(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
 
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
+
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
