@@ -255,3 +255,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # MAINTAINER
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cardinal.maintainer=Sathish K
+
+# Vendor patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.patch.level=OxygenOS_5.1.1
