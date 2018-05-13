@@ -252,10 +252,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
 
-# MAINTAINER
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cardinal.maintainer=Sathish K
-
 # Vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.patch.level=OxygenOS_5.1.1
