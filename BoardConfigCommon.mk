@@ -28,6 +28,9 @@ TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 BOARD_VENDOR := oneplus
 
+# Enable treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
 # we are too big to fit in
 PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
 
